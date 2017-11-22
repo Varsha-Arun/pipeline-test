@@ -24,7 +24,7 @@ resources:
     pointer:
       sourceName: Varsha-Arun/sample-script-3
       buildOnPullRequestClose: true #false
-      buildOnPullRequest: true
+      buildOnPullRequest: false
       branch: pr
       
   - name: state
