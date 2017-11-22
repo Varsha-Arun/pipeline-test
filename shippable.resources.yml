@@ -15,7 +15,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: sreyaj/sample-script-3
+      sourceName: Varsha-Arun/sample-script-3
       branch: master
       
   - name: state
@@ -23,7 +23,7 @@ resources:
     
   - name: image1
     type: image
-    integration: ship-docker
+    integration: docker
     pointer:
       sourceName: "shiphitchcock4/hitchcock4_sample_node"
       isPull: false
@@ -36,13 +36,13 @@ resources:
     pointer:
       method: email
       recipients:
-        - "shiphitchcock4@gmail.com"
+        - "shiptest.rc.me@gmail.com"
         - "shiptest.rc.ow@gmail.com"
     flags: emailorp
     
   - name: notify-slack
     type: notification
-    integration: "ship-slack"
+    integration: "slack"
     pointer:
       recipients:
         - "#rc-public" 
@@ -52,7 +52,7 @@ resources:
     
   - name: notify-hipchat
     type: notification
-    integration: "ship-hipchat"
+    integration: "hipchat"
     pointer:
       recipients:
         - "#rc-public" 
@@ -97,17 +97,17 @@ resources:
       
   - name: my_hipchat_key
     type: integration
-    integration: ship-hipchat ###your hipchat  integration name
+    integration: hipchat ###your hipchat  integration name
     flags: intin
     
   - name: slackIN
     type: integration
-    integration: ship-slack ###your hipchat  integration name
+    integration: slack ###your hipchat  integration name
     flags: intinslack
     
   - name: cliconfig
     type: cliConfig
-    integration: ship-docker
+    integration: docker
     #pointer:        <object>
 
   - name: filejfrog
