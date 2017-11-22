@@ -25,7 +25,7 @@ resources:
       sourceName: Varsha-Arun/sample-script-3
       buildOnPullRequestClose: true #false
       buildOnPullRequest: true
-      branch: master
+      branch: pr
       
   - name: state
     type: state
