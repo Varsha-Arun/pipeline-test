@@ -11,11 +11,20 @@ resources:
       - testingsecondflags
       - testing third flag
       
-  - name: script3
+  - name: scriptphprepo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: Varsha-Arun/sample_php
+      branch: master
+  
+  - name: script3repo
     type: gitRepo
     integration: github
     pointer:
       sourceName: Varsha-Arun/sample-script-3
+      buildOnPullRequestClose: true #false
+      buildOnPullRequest: true
       branch: master
       
   - name: state
