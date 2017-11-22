@@ -30,7 +30,7 @@ jobs:
       - OUT: script3
       - OUT: image1
       - OUT: testdup2mani
-      - OUT: twoRunsh
+      #- OUT: twoRunsh
       - OUT: kube-dockeropts
       - OUT: test-trigger
       - OUT: test_params
@@ -92,7 +92,7 @@ jobs:
       - IN: script3
       - IN: image1
       - IN: testdup2mani
-     # - IN: twoRunsh
+      - IN: test-runSh-webhookv2
       - IN: kube-dockeropts
       - IN: test-trigger
       - IN: test_params
