@@ -27,7 +27,7 @@ jobs:
       - OUT: allpl-release11
       - OUT: my_hipchat_key
      # - OUT: slackIN
-      - OUT: script3
+      - OUT: scriptphprepo
       - OUT: image1
       - OUT: testdup2mani
       #- OUT: twoRunsh
@@ -40,12 +40,6 @@ jobs:
       - OUT: allpl-version
    #   - IN: testintegrationwebhook
       - TASK:  
-       # - script: ./IN/script3/gitRepo/echo.sh
-        - script: echo versionName=$SCRIPT3_VERSIONNUMBER > "$JOB_STATE/$IMAGE1.env"
-        #- script: echo commitSHA=$SCRIPT3_COMMIT >> "$JOB_STATE/$IMAGE1.env" 
-        - script: cat "$JOB_STATE/$IMAGE1.env"
-        - script: echo versionName=$SCRIPT3_VERSIONNUMBER > "$JOB_STATE/$TESTRUNSHWEBHOOKV2.env"
-        - script: cat "$JOB_STATE/$TESTRUNSHWEBHOOKV2.env"
         - script: echo "---integration typed resource---"
         - script: echo "int name ------->-"$TESTINTEGRATIONWEBHOOK_NAME
         - script: echo "webhookurl ------->-"$TESTINTEGRATIONWEBHOOK_INTEGRATION_WEBHOOKURL
@@ -70,9 +64,12 @@ jobs:
       - NOTIFY: notify-hipchat
       - NOTIFY: notify-slack
       
-      
-      
-      
+  - name: sampleRunsh
+    type: runSh
+    steps:
+      - IN: script3repo
+      - TASK:  
+        - script: ./IN/script3repo/gitRepo/echo.sh          
       
   - name: twoRunsh
     type: runSh
@@ -89,7 +86,7 @@ jobs:
       - IN: allpl-release11
       - IN: my_hipchat_key
      # - OUT: slackIN
-      - IN: script3
+      - IN: scriptphprepo
       - IN: image1
       - IN: testdup2mani
       - IN: test-runSh-webhookv2
@@ -103,7 +100,7 @@ jobs:
     
    #   - IN: testintegrationwebhook
       - TASK:  
-        - script: ./IN/script3/gitRepo/echo.sh
+        - script: ./IN/scriptphprepo/gitRepo/echo.sh
         - script: echo "test script is showing"
         
   - name: allpl-release11
