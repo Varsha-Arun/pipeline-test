@@ -85,7 +85,7 @@ jobs:
       - IN: state
       - IN: filejfrog
       - IN: cliconfig
-      - IN: sampleNod_ciRepo
+      - IN: sample_php_ciRepo
       - IN: allpl-release11
       - IN: my_hipchat_key
      # - OUT: slackIN
