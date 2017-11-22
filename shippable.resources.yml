@@ -23,8 +23,8 @@ resources:
     integration: github
     pointer:
       sourceName: Varsha-Arun/sample-script-3
-      buildOnPullRequestClose: false #true #
-      buildOnPullRequest: true
+      buildOnPullRequestClose: true #true #
+      buildOnPullRequest: false
       branch: pr
       
   - name: state
