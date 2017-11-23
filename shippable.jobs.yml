@@ -69,8 +69,7 @@ jobs:
     steps:
       - IN: script3repo
       - TASK:  
-        - script: ./IN/script3repo/gitRepo/echo.sh   
-        - script: env
+        - script: ./IN/script3repo/gitRepo/echo.sh
       
   - name: twoRunsh
     type: runSh
