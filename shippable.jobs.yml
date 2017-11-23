@@ -70,7 +70,7 @@ jobs:
       - IN: script3repo
       - TASK:  
         - script: ./IN/script3repo/gitRepo/echo.sh   
-        - script: echo isPullRequestClose=$isPullRequestClose
+        - script: env
       
   - name: twoRunsh
     type: runSh
