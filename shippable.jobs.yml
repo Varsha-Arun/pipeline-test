@@ -69,7 +69,8 @@ jobs:
     steps:
       - IN: script3repo
       - TASK:  
-        - script: ./IN/script3repo/gitRepo/echo.sh          
+        - script: ./IN/script3repo/gitRepo/echo.sh   
+        - script: echo isPullRequestClose=$isPullRequestClose
       
   - name: twoRunsh
     type: runSh
